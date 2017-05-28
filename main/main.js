@@ -1,9 +1,7 @@
-module.exports = function main(str) {
+module.exports = function main(name,age,klass) {
     console.log("Debug Info");
-	var sum = 0;
-	for(var i in str){
-		sum += Number(str[i]);
-	}
-	return sum;
-	
+	person a=new person(name,age);
+	student b=new student(name,age,klass);
+	a.introduce();
+	b.introduce();
 };
