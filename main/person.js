@@ -1,4 +1,4 @@
-function person(name,age){
+function Person(name,age){
 	this.name=name;
 	this.age=age;
 	this.introduce=function(){
