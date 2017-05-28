@@ -1,4 +1,7 @@
-module.exports = function main(a,b) {
+module.exports = function main(a) {
     console.log("Debug Info");
-    return a%b;
+	var baiwei = a%100;
+	var shiwei = (a/10)%10;
+	var gewei = a/100;
+    return baiwei+shiwei+gewei;
 };
