@@ -1,4 +1,4 @@
-require("person.js");
+require("../main/person.js");
 function Student(name,age,klass){
 	Person.call(this,name,age);
 	this.klass=klass;
