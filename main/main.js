@@ -2,11 +2,10 @@ module.exports = function main(numArray) {
    var Count=0;
    var MAX,MIN;
    var Sum=0;
-    for(var element of numArray)	{
+    for(var element of numArray){
 	if(Count == 0 ){
 			MAX = Number(element);
 			MIN = Number(element);
-			alert(MAX);
 		}
 		if(Number(element)>Number(MAX)){
 			MAX=element;
