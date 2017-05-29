@@ -1,4 +1,4 @@
-require("../main/person.js");
+const Person = require("../main/person.js");
 module.exports = function Student(name,age,klass){
 	Person.call(this,name,age);
 	this.klass=klass;
