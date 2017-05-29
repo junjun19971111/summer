@@ -1,4 +1,4 @@
-document.write("<script type='text/javascript' src='person.js'></script>");
+require("person.js");
 function Student(name,age,klass){
 	Person.call(this,name,age);
 	this.klass=klass;

@@ -1,5 +1,5 @@
-document.write("<script type='text/javascript' src='person.js'></script>");
-document.write("<script type='text/javascript' src='student.js'></script>");
+require("person.js");
+require("student.js");
 module.exports = function main(name,age,klass) {
     console.log("Debug Info");
 	var a=new Person(name,age);
