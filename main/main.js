@@ -15,6 +15,5 @@ module.exports = function main(numArray) {
 		Sum+=element;
 	});
 	var Average=Number(Sum)/Number(Count);
-	alert("o) 最小值 = "+MIN+"\n"+"o) 最大值 = "+MAX+"\n"+"o) 平均数量 = "Count+"\n"+"o) 平均值 = "+Average.toFixed(2));
-	
+	console.log("o) 最小值 = "+MIN+"\n"+"o) 最大值 = "+MAX+"\n"+"o) 平均数量 = "Count+"\n"+"o) 平均值 = "+Average.toFixed(2));
 };
