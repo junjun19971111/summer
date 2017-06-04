@@ -6,7 +6,7 @@ module.exports = function Cart(Goods,Count){
 		var totals = Number(0);
 		console.log("***<没钱赚商店>购物清单***");
 		for(var key in Count){	
-			Item item = (Item)Goods.get(Count[key]);
+			var item = Goods.get(Count[key]);
 			var goodsNO = item.getNO();	
 			var num = Count.get(goodsNO);
 			var total = Number(num)*Number(item.getPrice());
