@@ -1,17 +1,17 @@
-module.exports = function Cart(Goods,Count){
+ï»¿module.exports = function Cart(Goods,Count){
 	this.Goods=Goods;//Set<Item>
 	this.Count=Count;//HashMap<GoodsID,Count>
 	this.printBuyList = function(){
 		var totals = Number(0);
-		Console.log("***<Ã»Ç®×¬ÉÌµê>¹ºÎïÇåµ¥***");
+		Console.log("***<æ²¡é’±èµšå•†åº—>è´­ç‰©æ¸…å•***");
 		for(var item of Goods){
 			var goodsNO = item.getNO();	
 			var num = Count.get(goodsNO);
 			var total = Number(num)*Number(item.getPrice());
 			totals += Number(total);
-			Console.log("Ãû³Æ£º"+item.getName()+"£¬ÊıÁ¿£º"+num"Æ¿£¬µ¥¼Û£º"+item.getPrice().toFixed(2)+"(Ôª)£¬Ğ¡¼Æ£º"+total.toFixed(2)+"(Ôª)\n");
+			Console.log("åç§°ï¼š"+item.getName()+"ï¼Œæ•°é‡ï¼š"+num"ç“¶ï¼Œå•ä»·ï¼š"+item.getPrice().toFixed(2)+"(å…ƒ)ï¼Œå°è®¡ï¼š"+total.toFixed(2)+"(å…ƒ)\n");
 		}
-		Console.log("----------------------\n×Ü¼Æ£º"+totals+"(Ôª)\n**********************");
+		Console.log("----------------------\næ€»è®¡ï¼š"+totals+"(å…ƒ)\n**********************");
 	}
 
 
