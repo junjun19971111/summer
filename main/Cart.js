@@ -1,5 +1,4 @@
 ﻿const Item = require("../main/Item.js");
-
 module.exports = function Cart(Goods,Count){
 	this.Goods = Goods;//HashMap<GoodsID,Item>
 	this.Count = Count;//HashMap<GoodsID,Count>
@@ -7,7 +6,7 @@ module.exports = function Cart(Goods,Count){
 		var totals = Number(0);
 		console.log("***<没钱赚商店>购物清单***");
 		for(var key in Count){	
-			Item item = Goods.get(Count[key]);
+			Item item = (Item)Goods.get(Count[key]);
 			var goodsNO = item.getNO();	
 			var num = Count.get(goodsNO);
 			var total = Number(num)*Number(item.getPrice());
