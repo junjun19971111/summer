@@ -1,4 +1,4 @@
-const Cart = require("../main/Cart.js");
+const Pos = require("../main/pos.js");
 const Item = require("../main/Item.js");
 
 module.exports = function printInventory(goodsArray) {
@@ -20,8 +20,8 @@ module.exports = function printInventory(goodsArray) {
 				goodsMap.set(element,1);	
 			}
 		}
-		var cart = new Cart(Goods,goodsMap);
-		var result = cart.printInventory();
+		var pos = new Pos(Goods,goodsMap);
+		var result = pos.printInventory();
 		console.log(result);
 	}
 	

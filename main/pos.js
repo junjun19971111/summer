@@ -1,7 +1,7 @@
 module.exports = function Pos(Goods,Count){
 	this.Goods = Goods;//HashMap<GoodsID,Item>
 	this.Count = Count;//HashMap<GoodsID,Count>
-	this.pos = function(){
+	this.printInventory = function(){
 		var totals = Number(0);
 		var str = "***<没钱赚商店>购物清单***\n";
 		Count.forEach(function(value,key,map){
