@@ -7,8 +7,8 @@ module.exports = function main(goodsArray) {
 	var spirit = new Item('ITEM000001','雪碧','3.00');
 	var battery = new Item('ITEM000004','电池','2.00');
 	Goods.set('ITEM000000',cola);
-	Goods.add('ITEM000001',spirit);
-	Goods.add('ITEM000004',battery);
+	Goods.set('ITEM000001',spirit);
+	Goods.set('ITEM000004',battery);
 
 	var goodsMap = new Map();
 	for(var element of goodsArray){
