@@ -1,7 +1,7 @@
-const Cart = require("../main/Cart.js");
-const Item = require("../main/Item.js");
+const Cart = require("../main/cart.js");
+const Item = require("../main/item.js");
 
-module.exports = function POS(goodsArray) {
+module.exports = function main(goodsArray) {
 		var Goods = new Map();
 		var cola = new Item('ITEM000000','可口可乐','3.00'); 
 		var spirit = new Item('ITEM000001','雪碧','3.00');
@@ -22,6 +22,6 @@ module.exports = function POS(goodsArray) {
 		}
 		var cart = new Cart(Goods,goodsMap);
 		var result = cart.printBuyList();
-			console.log(result);
+		console.log(result);
 	}
 	
