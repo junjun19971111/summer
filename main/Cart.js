@@ -9,7 +9,7 @@
 			var num = Count.get(goodsNO);
 			var total = Number(num)*Number(item.getPrice());
 			totals += Number(total);
-			Console.log("名称："+item.getName()+"，数量："+num"瓶，单价："+item.getPrice().toFixed(2)+"(元)，小计："+total.toFixed(2)+"(元)\n");
+			Console.log("名称："+item.getName()+"，数量："+num"瓶，单价："+item.getPrice().toFixed(2)+"(元)，小计："+total.toFixed(2)+"(元)");
 		}
 		Console.log("----------------------\n总计："+totals+"(元)\n**********************");
 	}
