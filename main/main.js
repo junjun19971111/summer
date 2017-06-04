@@ -13,9 +13,12 @@ module.exports = function main(goodsArray) {
 		}
 	}
 	var goods = new Set();
-	goods.add(new Item('ITEM000000','可口可乐','3.00'));
-	goods.add(new Item('ITEM000001','雪碧','3.00'));
-	goods.add(new Item('ITEM000004','电池','2.00'));
+	var cola = new Item('ITEM000000','可口可乐','3.00'); 
+	var spirit = new Item('ITEM000001','雪碧','3.00');
+	var battery = new Item('ITEM000004','电池','2.00');
+	goods.add(cola);
+	goods.add(spirit);
+	goods.add(battery);
 	var cart = new Cart(goods,goodsMap);
 	cart.printBuyList();
 }
