@@ -1,7 +1,7 @@
 const Pos = require("../main/pos.js");
 const Item = require("../main/Item.js");
 
-module.exports = function printInventory(goodsArray) {
+module.exports = function main(goodsArray) {
 		var Goods = new Map();
 		var cola = new Item('ITEM000000','可口可乐','3.00'); 
 		var spirit = new Item('ITEM000001','雪碧','3.00');
@@ -21,8 +21,8 @@ module.exports = function printInventory(goodsArray) {
 			}
 		}
 		var pos = new Pos(Goods,goodsMap);
-		var result = pos.printInventory();
-		console.log(result);
+		pos.printInventory();
+	
 	}
 	
 	
