@@ -21,7 +21,7 @@ module.exports = function main(goodsArray) {
 			}
 		}
 		var cart = new Cart(Goods,goodsMap);
-		var result = cart.printBuyList();
+		var result = cart.pos();
 		console.log(result);
 	}
 	
