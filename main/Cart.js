@@ -1,6 +1,6 @@
 ﻿const Item = require("../main/Item.js");
 
-module.exports = function Cart(Goods,Count){
+module.exports = function Cart(Count){
 	var goods = new Set();
 	var cola = new Item('ITEM000000','可口可乐','3.00'); 
 	var spirit = new Item('ITEM000001','雪碧','3.00');
