@@ -1,24 +1,21 @@
-module.exports = function main(numArray) {
-   var Count=0;
-   var MAX,MIN;
-   var Sum=0;
-    if(numArray == null){
-		numArray = new Set([6, 9, 15, -2, 92, 11]);
+const Item = require("../main/Item.js");
+const Cart = require("../main/Cart.js");
+
+module.exports = function main(goodsArray) {
+    var goodsMap = new Map();
+	for(var element of goodsArray){
+		if(goodsMap.has(element)){
+			var num = Number(goodsMap.get(element));
+			num++;
+			goodsMap.set(element,num);
+		}else{
+			goodsMap.set(element,1);	
+		}
 	}
-	for(var element of numArray){
-		if(Count == 0 ){
-			MAX = Number(element);
-			MIN = Number(element);
-		}
-		if(Number(element)>Number(MAX)){
-			MAX=element;
-		}
-		if(Number(element)<Number(MIN)){
-			MIN=element;
-		}
-		Count++;
-		Sum+=element;
-	}
-	var Average=Number(Sum)/Number(Count);
-	console.log("o) 最小值 = "+MIN+"\n"+"o) 最大值 = "+MAX+"\n"+"o) 元素数量 = "+Count+"\n"+"o) 平均值 = "+Average.toFixed(2));
+	var goods = new Set();
+	goods.add(new Item('ITEM000000','可口可乐','3.00'));
+	goods.add(new Item('ITEM000001','雪碧','3.00'));
+	goods.add(new Item('ITEM000004','电池','2.00'));
+	var cart = new Cart(goods,goodsMap);
+	cart.printBuyList();
 }
