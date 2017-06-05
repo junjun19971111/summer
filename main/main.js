@@ -8,6 +8,6 @@ module.exports = function main(emailAddr,suffixArr) {
 		});
 		return result;
 	}	
-}
+
 	
 	
