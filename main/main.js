@@ -1,4 +1,4 @@
-const Pos = require("../main/Cart.js");
+const Cart = require("../main/Cart.js");
 
 module.exports = function main(goodsArray) {
 		var Goods = new Map();
