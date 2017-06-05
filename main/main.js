@@ -20,7 +20,6 @@ module.exports = function main(goodsArray) {
 			}
 		}
 		var cart = new Cart(goods,goodsMap);
-		cart.printInventory();
 		return cart.printInventory();
 	
 	}
