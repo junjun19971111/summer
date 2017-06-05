@@ -1,5 +1,5 @@
 const Cart = require("../main/Cart.js");
-
+const Item = require("../main/Item.js");
 module.exports = function main(goodsArray) {
 		var goods = new Map();
 		var cola = new Item('ITEM000000','可口可乐','3.00'); 
