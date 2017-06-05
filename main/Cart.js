@@ -12,7 +12,7 @@
 			totals += Number(total);
 			str += "名称："+item.getName()+"，数量："+num+item.getUnit()+"，单价："+item.getPrice()+"(元)，小计："+total.toFixed(2)+"(元)\n";
 		});
-		str += "----------------------\n总计："+totals+"(元)\n**********************";
+		str += "----------------------\n总计："+totals.toFixed(2)+"(元)\n**********************";
 		return str;
 	};	
 
