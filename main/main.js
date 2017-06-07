@@ -1,8 +1,8 @@
 module.exports = function main(num) {
 	var str = new Array(num.length);//array [row]=content
-	var numMap = new map();
+	var numMap = map();
 	for(var i=0;i<=9;i++){
-		var each = new map();//Map<"rowcol",val>
+		var each = map();//Map<"rowcol",val>
 		switch(i){
 			case 0:
 				each.put("00",0);each.put("01",1);each.put("02",0);
