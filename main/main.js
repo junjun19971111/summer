@@ -1,6 +1,10 @@
 module.exports = function main(num) {
 	var str = new Array(num.length);//array [row]=content
 	var numMap = new Map();
+	for(var i=0;i<num.length;i++){
+		str[i] = "";
+	}
+	var numArr = num.split("");
 	for(var i=0;i<=9;i++){
 		var each = new Map();//Map<"rowcol",val>
 		switch(i){
@@ -57,8 +61,8 @@ module.exports = function main(num) {
 		}
 		numMap.set(i,each);
 	}
-	for(var i of num){
-		var myeach = numMap.get(i);
+	for(var i of numArr){
+		var myeach = numMap.get(Number(i));
 		for(var row = 0;row<3;row++){
 			for(var col=0;col<num.length;col++){//数字的位数
 				switch(myeach.get(row+""+col)){
