@@ -76,7 +76,7 @@ module.exports = function main(num) {
 		}//row for
 	}//对输入中的每一位数字
 
-	var result = "\t"+str[0]+"\n"+str[1]+"\n"+str[2]+"\n";
+	var result = " "+str[0]+"\n"+str[1]+"\n"+str[2]+"\n";
 	return result;
 }	
 
