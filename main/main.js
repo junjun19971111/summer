@@ -1,64 +1,68 @@
 module.exports = function main(num) {
-	var str = new Array[num.length];//array [row]=content
-	for(var i of num){
+	var str = new Array(num.length);//array [row]=content
+	var numMap = new map();
+	for(var i=0;i<=9;i++){
+		var each = new map();//Map<"rowcol",val>
 		switch(i){
-			//0->· 1->_ 2->|
-			var map = new Map();//Map<"rowcol",val>
 			case 0:
-				map.put("00",0);map.put("01",1);map.put("02",0);
-				map.put("10",2);map.put("11",0);map.put("12",2);
-				map.put("20",2);map.put("21",1);map.put("22",2);
+				each.put("00",0);each.put("01",1);each.put("02",0);
+				each.put("10",2);each.put("11",0);each.put("12",2);
+				each.put("20",2);each.put("21",1);each.put("22",2);
 				break;
 			case 1:
-				map.put("00",0);map.put("01",0);map.put("02",0);
-				map.put("10",0);map.put("11",0);map.put("12",2);
-				map.put("20",0);map.put("21",0);map.put("22",2);
+				each.put("00",0);each.put("01",0);each.put("02",0);
+				each.put("10",0);each.put("11",0);each.put("12",2);
+				each.put("20",0);each.put("21",0);each.put("22",2);
 				break;
 			case 2:
-				map.put("00",0);map.put("01",1);map.put("02",0);
-				map.put("10",0);map.put("11",1);map.put("12",2);
-				map.put("20",2);map.put("21",1);map.put("22",0);
+				each.put("00",0);each.put("01",1);each.put("02",0);
+				each.put("10",0);each.put("11",1);each.put("12",2);
+				each.put("20",2);each.put("21",1);each.put("22",0);
 				break;	
 			case 3:
-				map.put("00",0);map.put("01",1);map.put("02",0);
-				map.put("10",0);map.put("11",1);map.put("12",2);
-				map.put("20",0);map.put("21",1);map.put("22",2);
+				each.put("00",0);each.put("01",1);each.put("02",0);
+				each.put("10",0);each.put("11",1);each.put("12",2);
+				each.put("20",0);each.put("21",1);each.put("22",2);
 				break;
 			case 4:
-				map.put("00",0);map.put("01",0);map.put("02",0);
-				map.put("10",2);map.put("11",1);map.put("12",2);
-				map.put("20",0);map.put("21",0);map.put("22",2);
+				each.put("00",0);each.put("01",0);each.put("02",0);
+				each.put("10",2);each.put("11",1);each.put("12",2);
+				each.put("20",0);each.put("21",0);each.put("22",2);
 				break;
 			case 5:
-				map.put("00",0);map.put("01",1);map.put("02",0);
-				map.put("10",2);map.put("11",1);map.put("12",0);
-				map.put("20",0);map.put("21",1);map.put("22",2);
+				each.put("00",0);each.put("01",1);each.put("02",0);
+				each.put("10",2);each.put("11",1);each.put("12",0);
+				each.put("20",0);each.put("21",1);each.put("22",2);
 				break;
 			case 6:
-				map.put("00",0);map.put("01",1);map.put("02",0);
-				map.put("10",2);map.put("11",1);map.put("12",0);
-				map.put("20",2);map.put("21",1);map.put("22",2);
+				each.put("00",0);each.put("01",1);each.put("02",0);
+				each.put("10",2);each.put("11",1);each.put("12",0);
+				each.put("20",2);each.put("21",1);each.put("22",2);
 				break;
 			case 7:
-				map.put("00",0);map.put("01",1);map.put("02",0);
-				map.put("10",0);map.put("11",0);map.put("12",0);
-				map.put("20",0);map.put("21",0);map.put("22",2);
+				each.put("00",0);each.put("01",1);each.put("02",0);
+				each.put("10",0);each.put("11",0);each.put("12",0);
+				each.put("20",0);each.put("21",0);each.put("22",2);
 				break;
 			case 8:
-				map.put("00",0);map.put("01",1);map.put("02",0);
-				map.put("10",2);map.put("11",1);map.put("12",2);
-				map.put("20",2);map.put("21",1);map.put("22",2);
+				each.put("00",0);each.put("01",1);each.put("02",0);
+				each.put("10",2);each.put("11",1);each.put("12",2);
+				each.put("20",2);each.put("21",1);each.put("22",2);
 				break;								
 			case 9:
-				map.put("00",0);map.put("01",1);map.put("02",0);
-				map.put("10",2);map.put("11",1);map.put("12",2);
-				map.put("20",0);map.put("21",0);map.put("22",2);
+				each.put("00",0);each.put("01",1);each.put("02",0);
+				each.put("10",2);each.put("11",1);each.put("12",2);
+				each.put("20",0);each.put("21",0);each.put("22",2);
 				break;		
 		}
+		numMap.put(i,each);
+	}
+	for(var i of num){
+		var myeach = numMap.get(i);
 		for(var row = 0;row<3;row++){
 			for(var col=0;col<num.length;col++){//数字的位数
-				switch(map.get(row+""+col)){
-					case 0:str[row]+='.');break;
+				switch(myeach.get(row+""+col)){
+					case 0:str[row]+='.';break;
 					case 1:str[row]+='_';break;
 					default:str[row]+='|';break;
 				}//switch
