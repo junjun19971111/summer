@@ -71,6 +71,7 @@ module.exports = function main(num) {
 					default:str[row]+='|';break;
 				}//switch
 			}//col for
+			str[row]+=" ";
 		}//row for
 	}//对输入中的每一位数字
 
