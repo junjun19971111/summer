@@ -65,14 +65,14 @@ module.exports = function main(num) {
 	for(var i of numArr){
 		var myeach = numMap.get(Number(i));
 		for(var row = 0;row<3;row++){
-			for(var col=0;col<3;col++){//数字的位数
+			for(var col=0;col<3;col++){
 				switch(myeach.get(row+""+col)){
 					case 0:str[row]+='.';break;
 					case 1:str[row]+='_';break;
 					default:str[row]+='|';break;
 				}//switch
 			}//col for
-			str[row]+="\t";
+			str[row]+=" ";
 		}//row for
 	}//对输入中的每一位数字
 
