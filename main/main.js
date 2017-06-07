@@ -62,8 +62,8 @@ module.exports = function main(num) {
 		}
 		numMap.set(i,map);
 	}
-	for(var i of numArr){
-		var myeach = numMap.get(Number(i));
+	for(var i in numArr){
+		var myeach = numMap.get(Number(numArr[i]));
 		for(var row = 0;row<3;row++){
 			for(var col=0;col<3;col++){
 				switch(myeach.get(row+""+col)){
@@ -74,8 +74,10 @@ module.exports = function main(num) {
 			}//col for
 			str[row]+=" ";
 		}//row for
-	}//对输入中的每一位数字
-
+	}
+	for(var index=0;index<3;index++){
+		str[index]=str[index].substring(0,str[index].length-1);
+	}
 	var result = str[0]+"\n"+str[1]+"\n"+str[2]+"\n";
 	return result;
 }	
