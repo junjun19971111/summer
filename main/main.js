@@ -1,61 +1,61 @@
 module.exports = function main(num) {
 	var str = new Array(num.length);//array [row]=content
-	var numMap = map();
+	var numMap = new Map();
 	for(var i=0;i<=9;i++){
-		var each = map();//Map<"rowcol",val>
+		var each = new Map();//Map<"rowcol",val>
 		switch(i){
 			case 0:
-				each.put("00",0);each.put("01",1);each.put("02",0);
-				each.put("10",2);each.put("11",0);each.put("12",2);
-				each.put("20",2);each.put("21",1);each.put("22",2);
+				each.set("00",0);each.set("01",1);each.set("02",0);
+				each.set("10",2);each.set("11",0);each.set("12",2);
+				each.set("20",2);each.set("21",1);each.set("22",2);
 				break;
 			case 1:
-				each.put("00",0);each.put("01",0);each.put("02",0);
-				each.put("10",0);each.put("11",0);each.put("12",2);
-				each.put("20",0);each.put("21",0);each.put("22",2);
+				each.set("00",0);each.set("01",0);each.set("02",0);
+				each.set("10",0);each.set("11",0);each.set("12",2);
+				each.set("20",0);each.set("21",0);each.set("22",2);
 				break;
 			case 2:
-				each.put("00",0);each.put("01",1);each.put("02",0);
-				each.put("10",0);each.put("11",1);each.put("12",2);
-				each.put("20",2);each.put("21",1);each.put("22",0);
+				each.set("00",0);each.set("01",1);each.set("02",0);
+				each.set("10",0);each.set("11",1);each.set("12",2);
+				each.set("20",2);each.set("21",1);each.set("22",0);
 				break;	
 			case 3:
-				each.put("00",0);each.put("01",1);each.put("02",0);
-				each.put("10",0);each.put("11",1);each.put("12",2);
-				each.put("20",0);each.put("21",1);each.put("22",2);
+				each.set("00",0);each.set("01",1);each.set("02",0);
+				each.set("10",0);each.set("11",1);each.set("12",2);
+				each.set("20",0);each.set("21",1);each.set("22",2);
 				break;
 			case 4:
-				each.put("00",0);each.put("01",0);each.put("02",0);
-				each.put("10",2);each.put("11",1);each.put("12",2);
-				each.put("20",0);each.put("21",0);each.put("22",2);
+				each.set("00",0);each.set("01",0);each.set("02",0);
+				each.set("10",2);each.set("11",1);each.set("12",2);
+				each.set("20",0);each.set("21",0);each.set("22",2);
 				break;
 			case 5:
-				each.put("00",0);each.put("01",1);each.put("02",0);
-				each.put("10",2);each.put("11",1);each.put("12",0);
-				each.put("20",0);each.put("21",1);each.put("22",2);
+				each.set("00",0);each.set("01",1);each.set("02",0);
+				each.set("10",2);each.set("11",1);each.set("12",0);
+				each.set("20",0);each.set("21",1);each.set("22",2);
 				break;
 			case 6:
-				each.put("00",0);each.put("01",1);each.put("02",0);
-				each.put("10",2);each.put("11",1);each.put("12",0);
-				each.put("20",2);each.put("21",1);each.put("22",2);
+				each.set("00",0);each.set("01",1);each.set("02",0);
+				each.set("10",2);each.set("11",1);each.set("12",0);
+				each.set("20",2);each.set("21",1);each.set("22",2);
 				break;
 			case 7:
-				each.put("00",0);each.put("01",1);each.put("02",0);
-				each.put("10",0);each.put("11",0);each.put("12",0);
-				each.put("20",0);each.put("21",0);each.put("22",2);
+				each.set("00",0);each.set("01",1);each.set("02",0);
+				each.set("10",0);each.set("11",0);each.set("12",0);
+				each.set("20",0);each.set("21",0);each.set("22",2);
 				break;
 			case 8:
-				each.put("00",0);each.put("01",1);each.put("02",0);
-				each.put("10",2);each.put("11",1);each.put("12",2);
-				each.put("20",2);each.put("21",1);each.put("22",2);
+				each.set("00",0);each.set("01",1);each.set("02",0);
+				each.set("10",2);each.set("11",1);each.set("12",2);
+				each.set("20",2);each.set("21",1);each.set("22",2);
 				break;								
 			case 9:
-				each.put("00",0);each.put("01",1);each.put("02",0);
-				each.put("10",2);each.put("11",1);each.put("12",2);
-				each.put("20",0);each.put("21",0);each.put("22",2);
+				each.set("00",0);each.set("01",1);each.set("02",0);
+				each.set("10",2);each.set("11",1);each.set("12",2);
+				each.set("20",0);each.set("21",0);each.set("22",2);
 				break;		
 		}
-		numMap.put(i,each);
+		numMap.set(i,each);
 	}
 	for(var i of num){
 		var myeach = numMap.get(i);
